@@ -25,6 +25,10 @@ def create_store():
     stores.append(new_store)
     return jsonify(new_store)
 
+@app.route('/store')
+def get_stores():
+  return jsonify({'stores': stores})
+
 
 
 if __name__ == '__main__':
