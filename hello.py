@@ -2,7 +2,7 @@ from flask import Flask,jsonify,request
 app = Flask(__name__)
 
 stores = [
-           {'name': 'My Store',
+           {'name': 'MyStore',
            'items': [{'name': 'my item',
                       'price': 15.99}
                      ]
