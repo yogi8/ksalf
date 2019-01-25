@@ -13,4 +13,5 @@ class Item(Resource):
         ag = data['bandwidth_rules']
 
         item = ItemModel(ac,ad,ae,af,ag)
+        item.save_to_db()
         return item.json()
