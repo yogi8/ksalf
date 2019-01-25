@@ -20,3 +20,7 @@ class ItemModel(db.Model):
 
     def json(self):
         return {'name': self.en }
+
+    def save_to_db(self):
+        db.session.add(self)
+        db.session.commit()
