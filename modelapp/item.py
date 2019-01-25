@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse
 from flask import request
+from models.model import ItemModel
 import json
 class Item(Resource):
     parser = reqparse.RequestParser()
@@ -10,4 +11,6 @@ class Item(Resource):
         ae = data['admin_details']
         af = data['gateways']
         ag = data['bandwidth_rules']
-        return ac
+
+        item = ItemModel(ac,ad,ae,af,ag)
+        return item.json()
