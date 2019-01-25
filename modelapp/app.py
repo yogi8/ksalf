@@ -1,7 +1,12 @@
-from flask_restful import Resource, reqparse
-class Item(Resource):
-    parser = reqparse.RequestParser()
+from flask import Flask
+from flask_restful import Api
+from item import Item
+app = Flask(__name__)
+app.config['PROPAGATE_EXCEPTIONS'] = True
+api = Api(app)
 
-    def post(self):
-        data = Item.parser.parse_args()
-        return data
+api.add_resource(Item, '/item')
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
