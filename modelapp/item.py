@@ -5,5 +5,4 @@ class Item(Resource):
     parser = reqparse.RequestParser()
     def post(self):
         data = json.loads(request.data)
-        yogi =  {'yogi': data}
-        return yogi
+        return data
