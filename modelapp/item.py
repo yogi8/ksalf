@@ -5,4 +5,5 @@ class Item(Resource):
     parser = reqparse.RequestParser()
     def post(self):
         data = json.loads(request.data)
-        return data
+        ac = int(data['enterprise_details'][0]['enterprisebranchid'])
+        return ac
