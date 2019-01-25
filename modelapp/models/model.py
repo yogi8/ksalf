@@ -19,4 +19,4 @@ class ItemModel(db.Model):
         self.ba = ba
 
     def json(self):
-        return {'name': self.eid }
+        return {'name': self.en }
