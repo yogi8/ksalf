@@ -17,9 +17,10 @@ class ItemModel(db.Model):
         self.ad = str(ad)
         self.ga = str(ga)
         self.ba = str(ba)
+        self.yogi = en
 
     def json(self):
-        return {'name': self.en }
+        return {'name': type(self.yogi) }
 
     def save_to_db(self):
         db.session.add(self)
