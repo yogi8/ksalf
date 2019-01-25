@@ -3,6 +3,6 @@ from flask import request
 class Item(Resource):
     parser = reqparse.RequestParser()
     def post(self):
-        data = request.data[0]
+        data = request.data
         yogi =  {'yogi': data}
         return yogi
