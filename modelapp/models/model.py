@@ -13,10 +13,10 @@ class ItemModel(db.Model):
 
     def __init__(self, eid, en, ad, ga, ba):
         self.eid = eid
-        self.en = en
-        self.ad = ad
-        self.ga = ga
-        self.ba = ba
+        self.en = str(en)
+        self.ad = str(ad)
+        self.ga = str(ga)
+        self.ba = str(ba)
 
     def json(self):
         return {'name': self.en }
